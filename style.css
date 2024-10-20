@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #282c34;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#searchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#inputBox {
+    width: 220px;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid #61dafb;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#inputBox:focus {
+    border-color: #21a1f1;
+}
+
+#submitButton {
+    height: 42px;
+    padding: 0 20px;
+    border: none;
+    background-color: #61dafb;
+    color: #282c34;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px; 
+}
+
+#submitButton:hover {
+    background-color: #21a1f1;
+}
+
+#boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 35px;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.box {
+    background-color: #3a3f47;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0);
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+#userInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px; 
+}
+
+#profileImg {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    border: 2px solid #61dafb; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0);
+}
+
+#imageInfo img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px;
+    max-height: 200px; 
+    object-fit: cover; 
+    padding: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0);
+    margin-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.visible:hover {
+    background-color: #7eceff;
+    border: 1px solid black;
+    color: black;
+    font-weight: 700;
+}
+
+.no-results {
+    font-size: 24px; 
+    font-family: 'Arial', sans-serif;
+    text-align: center; 
+    color: #61dafb; 
+    margin-top: 20px; 
+    margin-left: 100px;
+    padding: 20px; 
+    border: 2px dashed #61dafb; 
+    border-radius: 10px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+}
